@@ -30,5 +30,13 @@ return [
 ];
 ```
 
+### Environment Constants
+You should set environment variables `YII_ENV` and `YII_DEBUG`.  
+It will be used to define Yii2 constants:
+- `YII_ENV` (prod/dev/test), default `dev`
+- `YII_DEBUG` (0/1), default `1` (true)
+
+*See autoload file [constants.php](./src/constants.php) for details.*
+
 ## License
 [MIT](./LICENSE)
