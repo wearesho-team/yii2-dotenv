@@ -1,0 +1,31 @@
+{
+  "name": "wearesho-team/yii2-dotenv",
+  "description": "Yii2 DotEnv File Support",
+  "type": "library",
+  "require": {
+    "yiisoft/yii2": "^2.0.19",
+    "php": ">=7.2",
+    "vlucas/phpdotenv": "^3.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.4"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexander Letnikow",
+      "email": "reclamme@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "Wearesho\\Yii2\\DotEnv\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Wearesho\\Yii2\\DotEnv\\Tests\\": "tests/"
+    }
+  }
+}
