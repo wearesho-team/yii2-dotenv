@@ -46,6 +46,4 @@ class Bootstrap extends base\BaseObject implements base\BootstrapInterface
             dirname($basePath), // support yii2-app-advanced,
         ];
     }
-
 }
-
