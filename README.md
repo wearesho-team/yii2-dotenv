@@ -7,7 +7,7 @@ using [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv).
 
 ## Installation
 ```bash
-composer require wearesho-team/yii2-dotenv:^1.0
+composer require wearesho-team/yii2-dotenv:^1.1.2
 ```
 
 ## Usage
