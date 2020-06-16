@@ -4,10 +4,11 @@
 
 Yii2 Support for loading environment variables from DotEnv files 
 using [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv).
+Required PHP >=7.4.
 
 ## Installation
 ```bash
-composer require wearesho-team/yii2-dotenv:^1.1.2
+composer require wearesho-team/yii2-dotenv:^1.2
 ```
 
 ## Usage
