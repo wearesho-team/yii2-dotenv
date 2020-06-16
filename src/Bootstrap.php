@@ -10,11 +10,9 @@ defined('YII_ENV') or define('YII_ENV', 'prod');
 
 class Bootstrap extends base\BaseObject implements base\BootstrapInterface
 {
-    /** @var string environment DotEnv file name */
-    public $file = '.env.' . YII_ENV;
+    public ?string $file = '.env.' . YII_ENV;
 
-    /** @var string optional environment override DotEnv file name */
-    public $overrideFile = '.env';
+    public ?string $overrideFile = '.env';
 
     public function bootstrap($app): array
     {
