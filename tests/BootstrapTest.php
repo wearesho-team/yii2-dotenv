@@ -36,4 +36,9 @@ class BootstrapTest extends TestCase
         $mock->method('getBasePath')->willReturn(__DIR__ . DIRECTORY_SEPARATOR . 'data');
         return $mock;
     }
+
+    public function testA(): void
+    {
+
+    }
 }
