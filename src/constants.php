@@ -9,7 +9,7 @@ $repo = RepositoryBuilder::createWithDefaultAdapters()
     ->allowList(['YII_DEBUG', 'YII_ENV',])
     ->make();
 
-$dotEnv = Dotenv::create($repo, [$_SERVER['PWD'], getcwd()], ['.env', '.env.example',]);
+$dotEnv = Dotenv::create($repo, [$_SERVER['PWD'] ?? getcwd()], ['.env', '.env.example',]);
 $dotEnv->safeLoad();
 $dotEnv->required('YII_ENV')->allowedValues(['dev', 'test', 'prod']);
 $dotEnv->ifPresent('YII_DEBUG')->isBoolean();
