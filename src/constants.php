@@ -2,11 +2,10 @@
 
 use Dotenv\Dotenv;
 use Dotenv\Repository\RepositoryBuilder;
+use Dotenv\Repository\Adapter\PutenvAdapter;
 
-$allowList = ['YII_DEBUG', 'YII_ENV',];
 $repo = RepositoryBuilder::createWithDefaultAdapters()
-    ->addAdapter(\Dotenv\Repository\Adapter\PutenvAdapter::class)
-    ->allowList(['YII_DEBUG', 'YII_ENV',])
+    ->addAdapter(PutenvAdapter::class)
     ->make();
 
 $dotEnv = Dotenv::create($repo, [$_SERVER['PWD'] ?? getcwd()], ['.env', '.env.example',]);
@@ -15,6 +14,6 @@ $dotEnv->required('YII_ENV')->allowedValues(['dev', 'test', 'prod']);
 $dotEnv->ifPresent('YII_DEBUG')->isBoolean();
 
 $define = new Wearesho\Yii2\DotEnv\Define\Writer;
-foreach ($allowList as $key) {
+foreach (['YII_DEBUG', 'YII_ENV',] as $key) {
     $define->write($key, $repo->get($key));
 }
