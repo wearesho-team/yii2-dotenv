@@ -6,7 +6,7 @@ use yii\base;
 
 class Bootstrap extends base\BaseObject implements base\BootstrapInterface
 {
-    public function bootstrap($app): array
+    public function bootstrap($app): void
     {
     }
 }
